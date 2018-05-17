@@ -375,7 +375,6 @@ echo "8) Keluar :(\n";
 sleep(1);
 echo "Pilih salah satu opsi : ";
 $id = trim(fgets(STDIN, 1024));
-echo "\n+------------------------------------+\n";
 if (empty($id)) {
 	echo "Opsi Tidak Boleh Kosong!\n";
 	exit();
@@ -443,7 +442,7 @@ else {
 	echo "Gagal Menerjemahkan :(  $indo\n";
 }
 }
-echo "php indojawa.php";
+php indojawa.php
 // Hasil Terjemahan Dari \n$indo 	: 
 if ($id == "2") {
 echo "File teks yang akan diterjemahkan		: ";
@@ -507,7 +506,7 @@ else {
 	echo "Gagal Menerjemahkan :(  $indo\n";
 }
 }
-echo "php indojawa.php";
+php indojawa.php
 if ($id == "5") {
 echo "File teks yang akan diterjemahkan		: ";
 $nama_file = trim(fgets(STDIN, 1024));
@@ -570,7 +569,7 @@ else {
 	echo "Gagal Menerjemahkan :(  $indo\n";
 }
 }
-echo "php indojawa.php";
+php indojawa.php
 if ($id == "6") {
 echo "File teks yang akan diterjemahkan		: ";
 $nama_file = trim(fgets(STDIN, 1024));
@@ -633,7 +632,7 @@ else {
 	echo "Gagal Menerjemahkan :(  $indo\n";
 }
 }
-echo "php indojawa.php";
+php indojawa.php
 if ($id == "3") {
 echo "File teks yang akan diterjemahkan		: ";
 $nama_file = trim(fgets(STDIN, 1024));
@@ -695,9 +694,7 @@ $header = array(
 else {
 	echo "Gagal Menerjemahkan :(  $indo\n";
 }
-}
-echo "php indojawa.php";
-if ($id == "4") {
+}) {
 echo "File teks yang akan diterjemahkan		: ";
 $nama_file = trim(fgets(STDIN, 1024));
 echo "File teks hasil terjemahan yang akan disimpan 	 : ";
