@@ -1,11 +1,6 @@
 <?php
 /**
 * @author 			 : Ardan (Ardzz) [Z0NK3X]
-* @date 				 : 17-05-2018
-* @last modified by 	 : Ardan
-* My Github 			 : https://github.com/ardzz/
-* IG 					 : https://www.instagram.com/ar_dhann/
-* BLOG 					 : https://bac0ders.me/
 */
 
 @error_reporting(0);
@@ -27,18 +22,13 @@ sleep(1);
 function banner(){
 	system('clear');
 	echo "
- ____                             ____
- \ \ \                           / / /
-  \ \ \                         / / / 
-   > > >  [ Translator Jawa ]  < < < 
-  / / /                         \ \ \ 
- /_/_/                           \_\_\
-+-------------[ Z0NK3X ]--------------+             
+
+     [ Translator Jawa ]   
+         
 	\n";
 }
 banner();
 sleep(1);
-//echo "+------------------------------------+\n";
 
 //echo basename(__FILE__)."\n";
 echo "1) Bahasa Indonesia ke Jawa\n";
@@ -55,14 +45,10 @@ echo "6) Krama Halus ke Bahasa Indonesia\n";
 sleep(1);
 echo "7) Terjemahkan Dari File teks (txt)\n";
 sleep(1);
-echo "8) About Me :)\n";
-sleep(1);
-echo "9) Cek Update\n";
-sleep(1);
-echo "10) Keluar :(\n";
+echo "10) Keluar\n";
 echo "Pilih salah satu opsi : ";
 $id = trim(fgets(STDIN, 1024));
-echo "\n+------------------------------------+\n";
+echo 
 if (empty($id)) {
 	echo "Opsi Tidak Boleh Kosong!\n";
 	exit();
@@ -342,35 +328,22 @@ else {
 if ($id == "8") {
 	system("clear");
 	sleep(1);
-	echo " 		   ABOUT ME (Ardzz)";
-	sleep(2);
-	echo "
- 	   ________  _   _ _  _________  __
-	  |__  / _ \| \ | | |/ /___ /\ \/ /
-	    / / | | |  \| | ' /  |_ \ \  / 
-	   / /| |_| | |\  | . \ ___) |/  \ 
-	  /____\___/|_| \_|_|\_\____//_/\_\
-	  
-	           [#] Z0NK3X [#]
-	           [#]BCO-TEAM[#]
-	             :: 2K18 ::
-	            BAC0DERS.COM
-        +--------------------------------------+\n";
+	echo "Recoded by majestic";
         exit();
 }
 if ($id == "10") {
 	system('clear');
-	echo "Kamu akan segera keluar... :(\n";
+	echo "Tunggu sebentar...\n";
 	sleep(3);
 	exit();
 }
 if ($id == "7") {
 	system("clear");
 sleep(1);
-$batas = "+--------------------------------+";
+$batas = " ";
 banner();
 sleep(1);
-//echo "+------------------------------------+\n";
+//echo " \n";
 
 //echo basename(__FILE__)."\n";
 echo "1) Bahasa Indonesia ke Jawa\n";
@@ -391,7 +364,7 @@ echo "8) Keluar :(\n";
 sleep(1);
 echo "Pilih salah satu opsi : ";
 $id = trim(fgets(STDIN, 1024));
-echo "\n+------------------------------------+\n";
+echo "\n \n";
 if (empty($id)) {
 	echo "Opsi Tidak Boleh Kosong!\n";
 	exit();
@@ -773,20 +746,7 @@ else {
 if ($id == "7") {
 	system("clear");
 	sleep(1);
-	echo " 		   ABOUT ME (Ardzz)";
-	sleep(2);
-	echo "
- 	   ________  _   _ _  _________  __
-	  |__  / _ \| \ | | |/ /___ /\ \/ /
-	    / / | | |  \| | ' /  |_ \ \  / 
-	   / /| |_| | |\  | . \ ___) |/  \ 
-	  /____\___/|_| \_|_|\_\____//_/\_\
-	  
-	           [#] Z0NK3X [#]
-	           [#]BCO-TEAM[#]
-	             :: 2K18 ::
-	            BAC0DERS.ME
-        +--------------------------------------+\n";
+	echo "Recoded by majest1c";
         exit();
 }
 if ($id == "8") {
@@ -795,34 +755,5 @@ if ($id == "8") {
 	sleep(5);
 	exit();
 }
-}
-$nf = basename(__FILE__);
-if ($id == "9"){
-	$version = "2.0"; //versi aplikasi jangan diganti!
-	$update = file_get_contents("https://urlredirector.tk/apdet.php?version=".$version);
-	$update = json_decode($update, TRUE);
-	if ($update['update'] == "yes") {
-		$new_version = $update['version'];
-		echo "Update Tersedia! Versi $new_version, Ingin Memperbarui? (y/n) : ";
-		$up = trim(fgets(STDIN, 1024));
-		if ($up == "y") {
-			echo "Sedang Mengunduh....\n";
-			system('wget -O '.$nf.' https://raw.githubusercontent.com/ardzz/translator_jawa/master/translator_jawa.php');
-			echo "Berhasil Diperbarui!\n";
-			sleep(2);
-			}
-			else {
-				echo "Membatalkan Pembaruan....\n";
-				sleep(5);
-				exit();
-			}
-	}
-	elseif ($update['version'] == "null") {
-		$msg = $update['msg'];
-		echo $msg."\n";
-	}
-	else {
-		echo "Update Tidak Tersedia!\n";
-	}
 }
 ?>
